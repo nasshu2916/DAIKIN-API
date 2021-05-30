@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@apidevtools/swagger-cli": "^4.0.4"
+  }
+}
