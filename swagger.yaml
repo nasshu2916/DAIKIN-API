@@ -28,6 +28,18 @@ paths:
             機器の時刻
           schema:
             $ref: "#/definitions/get_datetime"
+  /common/get_notify:
+    get:
+      description: |
+        通知を取得
+      produces:
+        - text/plain
+      responses: 
+        200:
+          description: |
+            通知情報
+          schema:
+            $ref: "#/definitions/get_notify"
 
 definitions:
   basic_info:
@@ -113,3 +125,13 @@ definitions:
         type: integer
       zone:
         type: integer
+  get_notify:
+    type: object
+    properties:
+      ret:
+        type: string
+        example: OK
+      auto_off_flg:
+        type: integer
+      auto_off_tm: 
+        type: string
