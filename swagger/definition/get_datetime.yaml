@@ -1,0 +1,18 @@
+type: object
+properties:
+  ret:
+    type: string
+    example: OK
+  sta:
+    type: integer
+    example: 1
+  cur:
+    type: string
+    example: "2000/1/1 12:0:0"
+  reg:
+    type: string
+    example: "jp"
+  dst:
+    type: integer
+  zone:
+    type: integer

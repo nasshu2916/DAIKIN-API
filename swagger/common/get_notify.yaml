@@ -1,0 +1,11 @@
+get:
+  description: |
+    通知を取得
+  produces:
+    - text/plain
+  responses:
+    200:
+      description: |
+        通知情報
+      schema:
+        $ref: "../definition/get_notify.yaml"

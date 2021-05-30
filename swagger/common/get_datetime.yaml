@@ -1,0 +1,11 @@
+get:
+  description: |
+    機器の時刻を取得
+  produces:
+    - text/plain
+  responses:
+    200:
+      description: |
+        機器の時刻
+      schema:
+        $ref: "../definition/get_datetime.yaml"

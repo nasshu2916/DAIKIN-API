@@ -1,0 +1,63 @@
+type: object
+properties:
+  ret:
+    type: string
+    example: OK
+  type:
+    type: string
+    example: cleaner
+  reg:
+    type: string
+    example: jp
+  adp_kind:
+    type: integer
+  var:
+    type: string
+    example: "1_10_0"
+  rev:
+    type: string
+  pv:
+    type: integer
+  pow:
+    type: integer
+  err:
+    type: integer
+  location:
+    type: integer
+  name:
+    type: string
+  icon:
+    type: integer
+  method:
+    type: string
+    example: polling
+  port:
+    type: integer
+  id:
+    type: string
+  pw:
+    type: string
+  lpw_flag:
+    type: integer
+  led:
+    type: integer
+  dst:
+    type: integer
+  en_setzone:
+    type: integer
+  mac:
+    type: string
+  ssid:
+    type: string
+  adp_mode:
+    type: string
+  grp_name:
+    type: string
+  en_grp:
+    type: integer
+  en_hol:
+    type: integer
+  edid:
+    type: string
+  sw_id:
+    type: string

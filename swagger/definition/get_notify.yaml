@@ -1,0 +1,9 @@
+type: object
+properties:
+  ret:
+    type: string
+    example: OK
+  auto_off_flg:
+    type: integer
+  auto_off_tm:
+    type: string

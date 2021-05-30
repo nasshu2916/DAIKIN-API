@@ -1,0 +1,135 @@
+swagger: '2.0'
+info:
+  version: 0.0.0
+  title: DAIKEN API
+paths:
+  /common/basic_info:
+    get:
+      description: |
+        機器の基本情報を取得
+      produces:
+        - text/plain
+      responses:
+        '200':
+          description: |
+            機器の基本情報
+          schema:
+            $ref: '#/definitions/basic_info'
+  /common/get_datetime:
+    get:
+      description: |
+        機器の時刻を取得
+      produces:
+        - text/plain
+      responses:
+        '200':
+          description: |
+            機器の時刻
+          schema:
+            $ref: '#/definitions/get_datetime'
+  /common/get_notify:
+    get:
+      description: |
+        通知を取得
+      produces:
+        - text/plain
+      responses:
+        '200':
+          description: |
+            通知情報
+          schema:
+            $ref: '#/definitions/get_notify'
+definitions:
+  basic_info:
+    type: object
+    properties:
+      ret:
+        type: string
+        example: OK
+      type:
+        type: string
+        example: cleaner
+      reg:
+        type: string
+        example: jp
+      adp_kind:
+        type: integer
+      var:
+        type: string
+        example: '1_10_0'
+      rev:
+        type: string
+      pv:
+        type: integer
+      pow:
+        type: integer
+      err:
+        type: integer
+      location:
+        type: integer
+      name:
+        type: string
+      icon:
+        type: integer
+      method:
+        type: string
+        example: polling
+      port:
+        type: integer
+      id:
+        type: string
+      pw:
+        type: string
+      lpw_flag:
+        type: integer
+      led:
+        type: integer
+      dst:
+        type: integer
+      en_setzone:
+        type: integer
+      mac:
+        type: string
+      ssid:
+        type: string
+      adp_mode:
+        type: string
+      grp_name:
+        type: string
+      en_grp:
+        type: integer
+      en_hol:
+        type: integer
+      edid:
+        type: string
+      sw_id:
+        type: string
+  get_datetime:
+    type: object
+    properties:
+      ret:
+        type: string
+        example: OK
+      sta:
+        type: integer
+        example: 1
+      cur:
+        type: string
+        example: '2000/1/1 12:0:0'
+      reg:
+        type: string
+        example: jp
+      dst:
+        type: integer
+      zone:
+        type: integer
+  get_notify:
+    type: object
+    properties:
+      ret:
+        type: string
+        example: OK
+      auto_off_flg:
+        type: integer
+      auto_off_tm:
+        type: string
