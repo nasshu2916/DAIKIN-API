@@ -1,0 +1,29 @@
+get:
+  description: |
+    現在時刻をセット
+  parameters:
+    - in: query
+      name: date
+      schema:
+        type: string
+        example: "2020/01/01"
+    - in: query
+      name: zone
+      schema:
+        type: string
+        example: GMT
+    - in: query
+      name: time
+      schema:
+        type: string
+        example: "12:00:00"
+  produces:
+    - text/plain
+  responses:
+    200:
+      description: |
+        現在時刻のセットに成功
+      schema:
+        type: string
+        example: "ret=OK"
+        description: 失敗時は'ret=PARAM NG'

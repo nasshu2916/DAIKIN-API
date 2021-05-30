@@ -10,6 +10,8 @@ paths:
     $ref: "./swagger/common/get_datetime.yaml"
   /common/get_notify:
     $ref: "./swagger/common/get_notify.yaml"
+  /common/notify_date_time:
+    $ref: "./swagger/common/notify_date_time.yaml"
 
 definitions:
   basic_info:
