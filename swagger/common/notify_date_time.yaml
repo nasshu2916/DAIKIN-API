@@ -27,3 +27,5 @@ get:
         type: string
         example: "ret=OK"
         description: 失敗時は'ret=PARAM NG'
+      example: |-
+        ret=OK

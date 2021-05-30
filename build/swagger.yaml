@@ -69,6 +69,7 @@ paths:
             type: string
             example: ret=OK
             description: 失敗時は'ret=PARAM NG'
+          example: ret=OK
 definitions:
   basic_info:
     type: object
@@ -153,6 +154,7 @@ definitions:
         type: integer
       zone:
         type: integer
+    example: 'ret=OK,sta=1,cur=2020/1/1 12:0:0,reg=jp,dst=1,zone=0'
   get_notify:
     type: object
     properties:
@@ -163,3 +165,4 @@ definitions:
         type: integer
       auto_off_tm:
         type: string
+    example: 'ret=OK,auto_off_flg=0,auto_off_tm=- -'

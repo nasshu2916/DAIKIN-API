@@ -7,3 +7,5 @@ properties:
     type: integer
   auto_off_tm:
     type: string
+example: |-
+  ret=OK,auto_off_flg=0,auto_off_tm=- -
