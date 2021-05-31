@@ -5,6 +5,8 @@ info:
 paths:
   /common/basic_info:
     get:
+      tags:
+        - common
       description: |
         機器の基本情報を取得
       produces:
@@ -17,6 +19,8 @@ paths:
             $ref: '#/definitions/basic_info'
   /common/get_datetime:
     get:
+      tags:
+        - common
       description: |
         機器の時刻を取得
       produces:
@@ -29,6 +33,8 @@ paths:
             $ref: '#/definitions/get_datetime'
   /common/get_notify:
     get:
+      tags:
+        - common
       description: |
         通知を取得
       produces:
@@ -41,6 +47,8 @@ paths:
             $ref: '#/definitions/get_notify'
   /common/notify_date_time:
     get:
+      tags:
+        - common
       description: |
         現在時刻をセット
       parameters:
@@ -70,6 +78,30 @@ paths:
             example: ret=OK
             description: 失敗時は'ret=PARAM NG'
           example: ret=OK
+  /cleaner/get_model_info:
+    get:
+      tags:
+        - cleaner
+      description: |
+        モデルの情報を取得
+      produces:
+        - text/plain
+      responses:
+        '200':
+          description: |
+            モデルの情報を取得
+  /cleaner/get_unit_info:
+    get:
+      tags:
+        - cleaner
+      description: |
+        ユニットの情報を取得
+      produces:
+        - text/plain
+      responses:
+        '200':
+          description: |
+            ユニットの情報を取得
 definitions:
   basic_info:
     type: object

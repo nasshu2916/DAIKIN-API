@@ -1,4 +1,6 @@
 get:
+  tags:
+    - common
   description: |
     機器の基本情報を取得
   produces:

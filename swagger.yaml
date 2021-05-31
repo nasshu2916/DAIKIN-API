@@ -12,7 +12,30 @@ paths:
     $ref: "./swagger/common/get_notify.yaml"
   /common/notify_date_time:
     $ref: "./swagger/common/notify_date_time.yaml"
-
+  /cleaner/get_model_info:
+    get:
+      tags:
+        - cleaner
+      description: |
+        モデルの情報を取得
+      produces:
+        - text/plain
+      responses:
+        200:
+          description: |
+            モデルの情報を取得
+  /cleaner/get_unit_info:
+    get:
+      tags:
+        - cleaner
+      description: |
+        ユニットの情報を取得
+      produces:
+        - text/plain
+      responses:
+        200:
+          description: |
+            ユニットの情報を取得
 definitions:
   basic_info:
     $ref: "./swagger/definition/basic_info.yaml"

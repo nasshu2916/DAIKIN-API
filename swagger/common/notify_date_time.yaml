@@ -1,4 +1,6 @@
 get:
+  tags:
+    - common
   description: |
     現在時刻をセット
   parameters:
