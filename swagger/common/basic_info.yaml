@@ -6,7 +6,7 @@ get:
   produces:
     - text/plain
   responses:
-    200:
+    '200':
       description: |
         機器の基本情報
       schema:

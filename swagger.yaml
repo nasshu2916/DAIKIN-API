@@ -1,17 +1,16 @@
-swagger: "2.0"
+swagger: '2.0'
 info:
-  version: "0.0.0"
+  version: 0.0.0
   title: DAIKIN API
-
 paths:
   /common/basic_info:
-    $ref: "./swagger/common/basic_info.yaml"
+    $ref: ./swagger/common/basic_info.yaml
   /common/get_datetime:
-    $ref: "./swagger/common/get_datetime.yaml"
+    $ref: ./swagger/common/get_datetime.yaml
   /common/get_notify:
-    $ref: "./swagger/common/get_notify.yaml"
+    $ref: ./swagger/common/get_notify.yaml
   /common/notify_date_time:
-    $ref: "./swagger/common/notify_date_time.yaml"
+    $ref: ./swagger/common/notify_date_time.yaml
   /cleaner/get_model_info:
     get:
       tags:
@@ -21,7 +20,7 @@ paths:
       produces:
         - text/plain
       responses:
-        200:
+        '200':
           description: |
             モデルの情報を取得
   /cleaner/get_unit_info:
@@ -33,13 +32,13 @@ paths:
       produces:
         - text/plain
       responses:
-        200:
+        '200':
           description: |
             ユニットの情報を取得
 definitions:
   basic_info:
-    $ref: "./swagger/definition/basic_info.yaml"
+    $ref: ./swagger/definition/basic_info.yaml
   get_datetime:
-    $ref: "./swagger/definition/get_datetime.yaml"
+    $ref: ./swagger/definition/get_datetime.yaml
   get_notify:
-    $ref: "./swagger/definition/get_notify.yaml"
+    $ref: ./swagger/definition/get_notify.yaml
