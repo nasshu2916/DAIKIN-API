@@ -10,4 +10,4 @@ get:
       content:
         text/plain:
           schema:
-            $ref: "../definition/basic_info.yaml"
+            $ref: "../schema/basic_info.yaml"

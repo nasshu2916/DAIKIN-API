@@ -10,4 +10,4 @@ get:
       content:
         text/plain:
           schema:
-            $ref: "../definition/get_datetime.yaml"
+            $ref: "../schema/get_datetime.yaml"

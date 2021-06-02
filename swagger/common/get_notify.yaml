@@ -10,4 +10,4 @@ get:
       content:
         text/plain:
           schema:
-            $ref: "../definition/get_notify.yaml"
+            $ref: "../schema/get_notify.yaml"

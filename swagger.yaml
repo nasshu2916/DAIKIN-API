@@ -37,10 +37,10 @@ paths:
 components:
   schemas:
     BasicInfo:
-      $ref: "./swagger/definition/basic_info.yaml"
+      $ref: "./swagger/schema/basic_info.yaml"
     GetDatetime:
-      $ref: "./swagger/definition/get_datetime.yaml"
+      $ref: "./swagger/schema/get_datetime.yaml"
     GetNotify:
-      $ref: "./swagger/definition/get_notify.yaml"
+      $ref: "./swagger/schema/get_notify.yaml"
     Success:
-      $ref: "./swagger/definition/success.yaml"
+      $ref: "./swagger/schema/success.yaml"

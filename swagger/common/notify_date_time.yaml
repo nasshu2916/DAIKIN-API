@@ -26,4 +26,4 @@ get:
       content:
         text/plain:
           schema:
-            $ref: "../definition/success.yaml"
+            $ref: "../schema/success.yaml"
