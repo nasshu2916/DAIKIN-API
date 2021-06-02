@@ -44,3 +44,9 @@ components:
       $ref: "./swagger/schema/get_notify.yaml"
     Success:
       $ref: "./swagger/schema/success.yaml"
+
+tags:
+  - name: common
+    description: 一般な情報取得、登録の API 群
+  - name: cleaner
+    description: 空気洗浄機の情報取得、登録の API 群
