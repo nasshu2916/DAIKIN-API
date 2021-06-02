@@ -3,11 +3,11 @@ get:
     - common
   description: |
     機器の基本情報を取得
-  produces:
-    - text/plain
   responses:
     '200':
       description: |
         機器の基本情報
-      schema:
-        $ref: "../definition/basic_info.yaml"
+      content:
+        text/plain:
+          schema:
+            $ref: "../definition/basic_info.yaml"

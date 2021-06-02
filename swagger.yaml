@@ -1,7 +1,9 @@
-swagger: '2.0'
+openapi: 3.0.2
+
 info:
   version: 0.0.0
   title: DAIKIN API
+
 paths:
   /common/basic_info:
     $ref: ./swagger/common/basic_info.yaml
@@ -17,28 +19,17 @@ paths:
         - cleaner
       description: |
         モデルの情報を取得
-      produces:
-        - text/plain
       responses:
         '200':
           description: |
-            モデルの情報を取得
+            モデルの情報
   /cleaner/get_unit_info:
     get:
       tags:
         - cleaner
       description: |
         ユニットの情報を取得
-      produces:
-        - text/plain
       responses:
-        '200':
+        "200":
           description: |
             ユニットの情報を取得
-definitions:
-  basic_info:
-    $ref: ./swagger/definition/basic_info.yaml
-  get_datetime:
-    $ref: ./swagger/definition/get_datetime.yaml
-  get_notify:
-    $ref: ./swagger/definition/get_notify.yaml

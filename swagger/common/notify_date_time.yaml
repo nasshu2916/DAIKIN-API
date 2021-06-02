@@ -19,15 +19,15 @@ get:
       schema:
         type: string
         example: "12:00:00"
-  produces:
-    - text/plain
   responses:
     '200':
       description: |
         現在時刻のセットに成功
-      schema:
-        type: string
-        example: "ret=OK"
-        description: 失敗時は'ret=PARAM NG'
-      example: |-
-        ret=OK
+      content:
+        text/plain:
+          schema:
+            type: string
+            example: "ret=OK"
+            description: 失敗時は'ret=PARAM NG'
+          example: |-
+            ret=OK
