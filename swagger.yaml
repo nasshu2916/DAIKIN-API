@@ -30,6 +30,15 @@ paths:
       description: |
         ユニットの情報を取得
       responses:
-        "200":
+        '200':
           description: |
             ユニットの情報を取得
+
+components:
+  schemas:
+    BasicInfo:
+      $ref: "./swagger/definition/basic_info.yaml"
+    GetDatetime:
+      $ref: "./swagger/definition/get_datetime.yaml"
+    GetNotify:
+      $ref: "./swagger/definition/get_notify.yaml"

@@ -16,69 +16,7 @@ paths:
           content:
             text/plain:
               schema:
-                type: object
-                properties:
-                  ret:
-                    type: string
-                    example: OK
-                  type:
-                    type: string
-                    example: cleaner
-                  reg:
-                    type: string
-                    example: jp
-                  adp_kind:
-                    type: integer
-                  var:
-                    type: string
-                    example: '1_10_0'
-                  rev:
-                    type: string
-                  pv:
-                    type: integer
-                  pow:
-                    type: integer
-                  err:
-                    type: integer
-                  location:
-                    type: integer
-                  name:
-                    type: string
-                  icon:
-                    type: integer
-                  method:
-                    type: string
-                    example: polling
-                  port:
-                    type: integer
-                  id:
-                    type: string
-                  pw:
-                    type: string
-                  lpw_flag:
-                    type: integer
-                  led:
-                    type: integer
-                  dst:
-                    type: integer
-                  en_setzone:
-                    type: integer
-                  mac:
-                    type: string
-                  ssid:
-                    type: string
-                  adp_mode:
-                    type: string
-                  grp_name:
-                    type: string
-                  en_grp:
-                    type: integer
-                  en_hol:
-                    type: integer
-                  edid:
-                    type: string
-                  sw_id:
-                    type: string
+                $ref: '#/components/schemas/BasicInfo'
   /common/get_datetime:
     get:
       tags:
@@ -92,25 +30,7 @@ paths:
           content:
             text/plain:
               schema:
-                type: object
-                properties:
-                  ret:
-                    type: string
-                    example: OK
-                  sta:
-                    type: integer
-                    example: 1
-                  cur:
-                    type: string
-                    example: '2000/1/1 12:0:0'
-                  reg:
-                    type: string
-                    example: jp
-                  dst:
-                    type: integer
-                  zone:
-                    type: integer
-                example: 'ret=OK,sta=1,cur=2020/1/1 12:0:0,reg=jp,dst=1,zone=0'
+                $ref: '#/components/schemas/GetDatetime'
   /common/get_notify:
     get:
       tags:
@@ -124,16 +44,7 @@ paths:
           content:
             text/plain:
               schema:
-                type: object
-                properties:
-                  ret:
-                    type: string
-                    example: OK
-                  auto_off_flg:
-                    type: integer
-                  auto_off_tm:
-                    type: string
-                example: 'ret=OK,auto_off_flg=0,auto_off_tm=- -'
+                $ref: '#/components/schemas/GetNotify'
   /common/notify_date_time:
     get:
       tags:
@@ -187,3 +98,100 @@ paths:
         '200':
           description: |
             ユニットの情報を取得
+components:
+  schemas:
+    BasicInfo:
+      type: object
+      properties:
+        ret:
+          type: string
+          example: OK
+        type:
+          type: string
+          example: cleaner
+        reg:
+          type: string
+          example: jp
+        adp_kind:
+          type: integer
+        var:
+          type: string
+          example: '1_10_0'
+        rev:
+          type: string
+        pv:
+          type: integer
+        pow:
+          type: integer
+        err:
+          type: integer
+        location:
+          type: integer
+        name:
+          type: string
+        icon:
+          type: integer
+        method:
+          type: string
+          example: polling
+        port:
+          type: integer
+        id:
+          type: string
+        pw:
+          type: string
+        lpw_flag:
+          type: integer
+        led:
+          type: integer
+        dst:
+          type: integer
+        en_setzone:
+          type: integer
+        mac:
+          type: string
+        ssid:
+          type: string
+        adp_mode:
+          type: string
+        grp_name:
+          type: string
+        en_grp:
+          type: integer
+        en_hol:
+          type: integer
+        edid:
+          type: string
+        sw_id:
+          type: string
+    GetDatetime:
+      type: object
+      properties:
+        ret:
+          type: string
+          example: OK
+        sta:
+          type: integer
+          example: 1
+        cur:
+          type: string
+          example: '2000/1/1 12:0:0'
+        reg:
+          type: string
+          example: jp
+        dst:
+          type: integer
+        zone:
+          type: integer
+      example: 'ret=OK,sta=1,cur=2020/1/1 12:0:0,reg=jp,dst=1,zone=0'
+    GetNotify:
+      type: object
+      properties:
+        ret:
+          type: string
+          example: OK
+        auto_off_flg:
+          type: integer
+        auto_off_tm:
+          type: string
+      example: 'ret=OK,auto_off_flg=0,auto_off_tm=- -'
