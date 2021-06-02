@@ -42,3 +42,5 @@ components:
       $ref: "./swagger/definition/get_datetime.yaml"
     GetNotify:
       $ref: "./swagger/definition/get_notify.yaml"
+    Success:
+      $ref: "./swagger/definition/success.yaml"

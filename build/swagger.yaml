@@ -74,10 +74,7 @@ paths:
           content:
             text/plain:
               schema:
-                type: string
-                example: ret=OK
-                description: 失敗時は'ret=PARAM NG'
-              example: ret=OK
+                $ref: '#/components/schemas/Success'
   /cleaner/get_model_info:
     get:
       tags:
@@ -195,3 +192,13 @@ components:
         auto_off_tm:
           type: string
       example: 'ret=OK,auto_off_flg=0,auto_off_tm=- -'
+    Success:
+      type: object
+      description: |
+        更新に成功
+        失敗時は'ret=PARAM NG'
+      properties:
+        ret:
+          type: string
+          example: OK
+      example: ret=OK
