@@ -3,6 +3,9 @@ openapi: 3.0.2
 info:
   version: 0.0.0
   title: DAIKIN API
+  description: |
+    json 形式で記述しているが、
+    実際は key と value を = で繋いだコンマ区切りの形式でレスポンスが返ってくる。
 
 paths:
   /common/basic_info:
@@ -20,7 +23,7 @@ paths:
       description: |
         モデルの情報を取得
       responses:
-        '200':
+        "200":
           description: |
             モデルの情報
           content:
@@ -34,9 +37,13 @@ paths:
       description: |
         ユニットの情報を取得
       responses:
-        '200':
+        "200":
           description: |
             ユニットの情報を取得
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/GetUnitInfo"
 
 components:
   schemas:
@@ -48,6 +55,8 @@ components:
       $ref: "./swagger/schema/get_notify.yaml"
     Success:
       $ref: "./swagger/schema/success.yaml"
+    GetUnitInfo:
+      $ref: "./swagger/schema/get_unit_info.yaml"
 
 tags:
   - name: common

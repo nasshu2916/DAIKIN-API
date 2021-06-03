@@ -4,6 +4,7 @@ description: |
 properties:
   ret:
     type: string
+    example: OK
   sup_mode:
     type: string
   sup_airvol:

@@ -2,6 +2,9 @@ openapi: 3.0.2
 info:
   version: 0.0.0
   title: DAIKIN API
+  description: |
+    json 形式で記述しているが、
+    実際は key と value を = で繋いだコンマ区切りの形式でレスポンスが返ってくる。
 paths:
   /common/basic_info:
     get:
@@ -85,6 +88,46 @@ paths:
         '200':
           description: |
             モデルの情報
+          content:
+            text/plain:
+              schema:
+                type: object
+                description: |
+                  モデルの情報
+                properties:
+                  ret:
+                    type: string
+                    example: OK
+                  sup_mode:
+                    type: string
+                  sup_airvol:
+                    type: string
+                  sup_humd0:
+                    type: string
+                  sup_humd1:
+                    type: string
+                  sup_humd2:
+                    type: string
+                  sup_humd3:
+                    type: string
+                  sup_humd4:
+                    type: string
+                  sup_humd5:
+                    type: string
+                  sup_sensor:
+                    type: string
+                  sup_devset:
+                    type: string
+                  en_scdltmr:
+                    type: string
+                  en_OpeOpt:
+                    type: string
+                  en_aclink:
+                    type: string
+                  streamer_type:
+                    type: string
+                  en_dust_filter:
+                    type: string
   /cleaner/get_unit_info:
     get:
       tags:
@@ -95,6 +138,10 @@ paths:
         '200':
           description: |
             ユニットの情報を取得
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/GetUnitInfo'
 components:
   schemas:
     BasicInfo:
@@ -202,6 +249,111 @@ components:
           type: string
           example: OK
       example: ret=OK
+    GetUnitInfo:
+      type: object
+      description: |
+        モデルの情報
+      properties:
+        ret:
+          type: string
+          example: OK
+        ctrl_info:
+          type: object
+          description: |
+            URL エンコードされたテキストで情報が来る
+          example: pow%3d1%2cmode%3d1%2cairvol%3d0%2chumd%3d4
+          properties:
+            pow:
+              type: integer
+              example: 1
+            mode:
+              type: integer
+              example: 1
+            airvol:
+              type: integer
+              example: 0
+            humd:
+              type: integer
+              example: 4
+        sensor_info:
+          type: object
+          description: |
+            センサの成功が URL エンコードされたテキストで来る
+          example: htemp%3d30.0%2chhum%3d50%2cpm25%3d0%2cdust%3d0%2codor%3d0
+          properties:
+            htemp:
+              type: integer
+              description: |
+                気温(摂氏)
+              example: 30
+            hhum:
+              type: integer
+              description: |
+                湿度
+              example: 50
+            pm25:
+              type: integer
+              description: |
+                pm2.5(0の時アプリでは1と表示される)
+              example: 0
+            dust:
+              type: integer
+              description: |
+                ほこり(0の時アプリでは1と表示される)
+              example: 0
+            odor:
+              type: integer
+              description: |
+                におい(0の時アプリでは1と表示される)
+              example: 0
+        unit_status:
+          type: object
+          description: |
+            URL エンコードされたテキストで情報が来る
+          example: filter%3d0%2cstrmr_cln%3d0%2cwater_supply%3d0%2cunit_err%3d0000
+          properties:
+            filter:
+              type: integer
+              example: 0
+            strmr_cln:
+              type: integer
+              example: 0
+            water_supply:
+              type: integer
+              example: 0
+            unit_err:
+              type: integer
+              example: 0
+        dev_setting:
+          type: object
+          description: |
+            URL エンコードされたテキストで情報が来る
+          example: led_dsp%3d1%2cd_sns%3d0%2cc_lock%3d0%2cstreamer%3d0%2cact_ion%3d1%2cbuzzer%3d1%2cturbo%3d-%2ceco_moni%3d1
+          properties:
+            led_dsp:
+              type: integer
+              example: 0
+            d_sns:
+              type: integer
+              example: 0
+            c_lock:
+              type: integer
+              example: 0
+            streamer:
+              type: integer
+              example: 0
+            act_ion:
+              type: integer
+              example: 1
+            buzzer:
+              type: integer
+              example: 1
+            turbo:
+              type: string
+              example: '-'
+            eco_moni:
+              type: integer
+              example: 1
 tags:
   - name: common
     description: 一般な情報取得、登録の API 群
