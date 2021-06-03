@@ -1,0 +1,36 @@
+type: object
+description: |
+  モデルの情報
+properties:
+  ret:
+    type: string
+  sup_mode:
+    type: string
+  sup_airvol:
+    type: string
+  sup_humd0:
+    type: string
+  sup_humd1:
+    type: string
+  sup_humd2:
+    type: string
+  sup_humd3:
+    type: string
+  sup_humd4:
+    type: string
+  sup_humd5:
+    type: string
+  sup_sensor:
+    type: string
+  sup_devset:
+    type: string
+  en_scdltmr:
+    type: string
+  en_OpeOpt:
+    type: string
+  en_aclink:
+    type: string
+  streamer_type:
+    type: string
+  en_dust_filter:
+    type: string

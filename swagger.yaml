@@ -23,6 +23,10 @@ paths:
         '200':
           description: |
             モデルの情報
+          content:
+            text/plain:
+              schema:
+                $ref: "./swagger/schema/get_model_info.yaml"
   /cleaner/get_unit_info:
     get:
       tags:
