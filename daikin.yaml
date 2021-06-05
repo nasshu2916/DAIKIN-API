@@ -39,7 +39,7 @@ paths:
       tags:
         - common
       description: |
-        通知を取得
+        通知情報を取得
       responses:
         '200':
           description: |
@@ -53,7 +53,7 @@ paths:
       tags:
         - common
       description: |
-        現在時刻をセット
+        現在時刻の登録
       parameters:
         - in: query
           name: date
@@ -147,7 +147,7 @@ paths:
       tags:
         - cleaner
       description: |
-        空気清浄機のモードを変更する
+        空気清浄機のモードを変更
       requestBody:
         content:
           text/plain:
@@ -433,6 +433,6 @@ components:
       example: ret=OK
 tags:
   - name: common
-    description: 一般な情報取得、登録の API 群
+    description: 機器に関する情報の取得、登録の API 群
   - name: cleaner
-    description: 空気洗浄機の情報取得、登録の API 群
+    description: 空気清浄機に関する情報の取得、登録の API 群

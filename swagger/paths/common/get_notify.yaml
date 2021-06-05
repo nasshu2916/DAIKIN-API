@@ -2,7 +2,7 @@ get:
   tags:
     - common
   description: |
-    通知を取得
+    通知情報を取得
   responses:
     '200':
       description: |

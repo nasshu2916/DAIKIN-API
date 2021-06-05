@@ -2,7 +2,7 @@ get:
   tags:
     - cleaner
   description: |
-    空気清浄機のモードを変更する
+    空気清浄機のモードを変更
   requestBody:
     content:
       text/plain:

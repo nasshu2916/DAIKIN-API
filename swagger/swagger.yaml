@@ -62,6 +62,6 @@ components:
 
 tags:
   - name: common
-    description: 一般な情報取得、登録の API 群
+    description: 機器に関する情報の取得、登録の API 群
   - name: cleaner
-    description: 空気洗浄機の情報取得、登録の API 群
+    description: 空気清浄機に関する情報の取得、登録の API 群

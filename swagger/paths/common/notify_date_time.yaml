@@ -2,7 +2,7 @@ get:
   tags:
     - common
   description: |
-    現在時刻をセット
+    現在時刻の登録
   parameters:
     - in: query
       name: date
