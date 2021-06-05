@@ -147,7 +147,7 @@ paths:
       tags:
         - cleaner
       description: |
-        をセットする
+        空気清浄機のモードを変更する
       requestBody:
         content:
           text/plain:
