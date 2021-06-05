@@ -2,12 +2,12 @@ get:
   tags:
     - common
   description: |
-    機器の時刻を取得
+    通知を取得
   responses:
     '200':
       description: |
-        機器の時刻
+        通知情報
       content:
         text/plain:
           schema:
-            $ref: "../schema/get_datetime.yaml"
+            $ref: "../../schema/get_notify.yaml"

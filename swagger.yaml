@@ -9,13 +9,13 @@ info:
 
 paths:
   /common/basic_info:
-    $ref: ./swagger/common/basic_info.yaml
+    $ref: ./swagger/paths/common/basic_info.yaml
   /common/get_datetime:
-    $ref: ./swagger/common/get_datetime.yaml
+    $ref: ./swagger/paths/common/get_datetime.yaml
   /common/get_notify:
-    $ref: ./swagger/common/get_notify.yaml
+    $ref: ./swagger/paths/common/get_notify.yaml
   /common/notify_date_time:
-    $ref: ./swagger/common/notify_date_time.yaml
+    $ref: ./swagger/paths/common/notify_date_time.yaml
   /cleaner/get_model_info:
     get:
       tags:
