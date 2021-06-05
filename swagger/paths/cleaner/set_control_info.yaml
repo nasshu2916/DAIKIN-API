@@ -1,0 +1,73 @@
+get:
+  tags:
+    - cleaner
+  description: |
+    をセットする
+  requestBody:
+    content:
+      text/plain:
+        schema:
+          type: object
+          properties:
+            pow:
+              type: integer
+              enum:
+                - 0
+                - 1
+              description: |
+                電源のON, OFF  
+                0: OFF  
+                1: ON
+            mode:
+              type: integer
+              enum:
+                - 0
+                - 1
+                - 2
+                - 3
+                - 4
+                - 5
+              description: |
+                モード
+                0:   
+                1: おまかせ(humd, airvol 無視)  
+                2: 節電(airvol 無視)  
+                3: 花粉(airvol 無視)  
+                4: のど・はだ(humd, airvol 無視)  
+                5: サーキュレーター(airvol 無視)
+            humd:
+              type: integer
+              enum:
+                - 0
+                - 1
+                - 2
+                - 3
+              description: |
+                加湿  
+                0: OFF  
+                1: ひかえめ  
+                2: 標準  
+                3: 高め
+            airvol:
+              type: integer
+              enum:
+                - 0
+                - 1
+                - 2
+                - 3
+                - 5
+              description: |
+                風量  
+                0: 自動運転  
+                1: しずか  
+                2: 弱  
+                3: 標準  
+                5: ターボ
+  responses:
+    "200":
+      description: |
+        ユニット
+      content:
+        text/plain:
+          schema:
+            $ref: "../../schema/success.yaml"

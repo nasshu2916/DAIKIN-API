@@ -1,9 +1,12 @@
 type: object
 description: |
-  更新に成功
+  更新に成功  
   失敗時は'ret=PARAM NG'
 properties:
   ret:
     type: string
+    enum:
+      - OK
+      - PARAM NG
     example: OK
 example: ret=OK

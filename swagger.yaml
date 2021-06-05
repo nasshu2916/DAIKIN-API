@@ -44,6 +44,8 @@ paths:
             text/plain:
               schema:
                 $ref: "#/components/schemas/GetUnitInfo"
+  /cleaner/set_control_info:
+    $ref: ./swagger/paths/cleaner/set_control_info.yaml
 
 components:
   schemas:
@@ -53,10 +55,10 @@ components:
       $ref: "./swagger/schema/get_datetime.yaml"
     GetNotify:
       $ref: "./swagger/schema/get_notify.yaml"
-    Success:
-      $ref: "./swagger/schema/success.yaml"
     GetUnitInfo:
       $ref: "./swagger/schema/get_unit_info.yaml"
+    Success:
+      $ref: "./swagger/schema/success.yaml"
 
 tags:
   - name: common
