@@ -3,7 +3,7 @@ services:
   swagger:
     image: swaggerapi/swagger-ui
     volumes:
-      - ./swagger.yaml:/usr/share/nginx/html/swagger.yaml
+      - ./daikin.yaml:/usr/share/nginx/html/swagger.yaml
     environment:
       API_URL: swagger.yaml
     ports:
