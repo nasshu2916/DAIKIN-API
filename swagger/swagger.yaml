@@ -1,0 +1,67 @@
+openapi: 3.0.2
+
+info:
+  version: 0.0.0
+  title: DAIKIN API
+  description: |
+    json 形式で記述しているが、
+    実際は key と value を = で繋いだコンマ区切りの形式でレスポンスが返ってくる。
+
+paths:
+  /common/basic_info:
+    $ref: ./paths/common/basic_info.yaml
+  /common/get_datetime:
+    $ref: ./paths/common/get_datetime.yaml
+  /common/get_notify:
+    $ref: ./paths/common/get_notify.yaml
+  /common/notify_date_time:
+    $ref: ./paths/common/notify_date_time.yaml
+  /cleaner/get_model_info:
+    get:
+      tags:
+        - cleaner
+      description: |
+        モデルの情報を取得
+      responses:
+        "200":
+          description: |
+            モデルの情報
+          content:
+            text/plain:
+              schema:
+                $ref: "./schema/get_model_info.yaml"
+  /cleaner/get_unit_info:
+    get:
+      tags:
+        - cleaner
+      description: |
+        ユニットの情報を取得
+      responses:
+        "200":
+          description: |
+            ユニットの情報を取得
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/GetUnitInfo"
+  /cleaner/set_control_info:
+    $ref: ./paths/cleaner/set_control_info.yaml
+
+components:
+  schemas:
+    BasicInfo:
+      $ref: "./schema/basic_info.yaml"
+    GetDatetime:
+      $ref: "./schema/get_datetime.yaml"
+    GetNotify:
+      $ref: "./schema/get_notify.yaml"
+    GetUnitInfo:
+      $ref: "./schema/get_unit_info.yaml"
+    Success:
+      $ref: "./schema/success.yaml"
+
+tags:
+  - name: common
+    description: 一般な情報取得、登録の API 群
+  - name: cleaner
+    description: 空気洗浄機の情報取得、登録の API 群
