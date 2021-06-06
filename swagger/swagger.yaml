@@ -44,6 +44,20 @@ paths:
             text/plain:
               schema:
                 $ref: "#/components/schemas/GetUnitInfo"
+  /cleaner/get_control_info:
+    get:
+      tags:
+        - cleaner
+      description: |
+        空気清浄機のモードを取得
+      responses:
+        "200":
+          description: |
+            空気清浄機のモードを取得
+          content:
+            text/plain:
+              schema:
+                $ref: "#/components/schemas/GetControlInfo"
   /cleaner/set_control_info:
     $ref: ./paths/cleaner/set_control_info.yaml
 
@@ -57,6 +71,8 @@ components:
       $ref: "./schema/get_notify.yaml"
     GetUnitInfo:
       $ref: "./schema/get_unit_info.yaml"
+    GetControlInfo:
+      $ref: "./schema/get_control_info.yaml"
     Success:
       $ref: "./schema/success.yaml"
 

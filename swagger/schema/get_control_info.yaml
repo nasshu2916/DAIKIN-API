@@ -1,0 +1,15 @@
+type: object
+properties:
+  ret:
+    type: string
+    example: OK
+  pow:
+    type: integer
+  mode:
+    type: string
+  airvol:
+    type: string
+  humd:
+    type: string
+example: |
+  ret=OK,pow=1,mode=1,airvol=0,humd=4
