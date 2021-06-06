@@ -43,3 +43,4 @@ swagger には json 形式で書いてまずが、実際は key と value を = 
 | /cleaner/get_ctrl_info      | 空気清浄機のモードを取得         |
 | /cleaner/get_unit_status    | 空気清浄機のユニットの状態を取得 |
 | /cleaner/get_device_setting | 空気清浄機のデバイス設定を取得   |
+| /cleaner/get_day_snsr_count | 空気清浄機の1日のセンサ反応グラフの取得する   |

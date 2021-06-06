@@ -42,6 +42,8 @@ paths:
     $ref: ./paths/cleaner/get_unit_status.yaml
   /cleaner/get_device_setting:
     $ref: ./paths/cleaner/get_device_setting.yaml
+  /cleaner/get_day_snsr_count:
+    $ref: ./paths/cleaner/get_day_snsr_count.yaml
 
 components:
   schemas:
@@ -63,6 +65,8 @@ components:
       $ref: "./schema/get_unit_status.yaml"
     GetDeviceSetting:
       $ref: "./schema/get_device_setting.yaml"
+    GetDaySnsrCount:
+      $ref: "./schema/get_day_snsr_count.yaml"
     Success:
       $ref: "./schema/success.yaml"
 
