@@ -1,0 +1,32 @@
+type: object
+description: |
+  モデルの情報
+properties:
+  ret:
+    type: string
+    example: OK
+  htemp:
+    type: integer
+    description: |
+      気温(摂氏)
+    example: 30.0
+  hhum:
+    type: integer
+    description: |
+      湿度
+    example: 50
+  pm25:
+    type: integer
+    description: |
+      pm2.5(0の時アプリでは1と表示される)
+    example: 0
+  dust:
+    type: integer
+    description: |
+      ほこり(0の時アプリでは1と表示される)
+    example: 0
+  odor:
+    type: integer
+    description: |
+      におい(0の時アプリでは1と表示される)
+    example: 0

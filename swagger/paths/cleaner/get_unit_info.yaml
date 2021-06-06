@@ -1,0 +1,13 @@
+get:
+  tags:
+    - cleaner
+  description: |
+    ユニットの情報を取得
+  responses:
+    "200":
+      description: |
+        ユニットの情報を取得
+      content:
+        text/plain:
+          schema:
+            $ref: "../../schema/get_unit_info.yaml"

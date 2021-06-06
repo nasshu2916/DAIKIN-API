@@ -1,0 +1,19 @@
+type: object
+description: |
+  モデルの情報
+properties:
+  ret:
+    type: string
+    example: OK
+  filter:
+    type: integer
+    example: 0
+  strmr_cln:
+    type: integer
+    example: 0
+  water_supply:
+    type: integer
+    example: 0
+  unit_err:
+    type: integer
+    example: 0000

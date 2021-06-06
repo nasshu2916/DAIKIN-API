@@ -1,0 +1,13 @@
+get:
+  tags:
+    - cleaner
+  description: |
+    空気清浄機のユニットの状態を取得
+  responses:
+    "200":
+      description: |
+        空気清浄機のユニットの状態を取得
+      content:
+        text/plain:
+          schema:
+            $ref: "../../schema/get_sensor_info.yaml"

@@ -91,43 +91,7 @@ paths:
           content:
             text/plain:
               schema:
-                type: object
-                description: |
-                  モデルの情報
-                properties:
-                  ret:
-                    type: string
-                    example: OK
-                  sup_mode:
-                    type: string
-                  sup_airvol:
-                    type: string
-                  sup_humd0:
-                    type: string
-                  sup_humd1:
-                    type: string
-                  sup_humd2:
-                    type: string
-                  sup_humd3:
-                    type: string
-                  sup_humd4:
-                    type: string
-                  sup_humd5:
-                    type: string
-                  sup_sensor:
-                    type: string
-                  sup_devset:
-                    type: string
-                  en_scdltmr:
-                    type: string
-                  en_OpeOpt:
-                    type: string
-                  en_aclink:
-                    type: string
-                  streamer_type:
-                    type: string
-                  en_dust_filter:
-                    type: string
+                $ref: '#/components/schemas/GetModelInfo'
   /cleaner/get_unit_info:
     get:
       tags:
@@ -237,6 +201,34 @@ paths:
             text/plain:
               schema:
                 $ref: '#/components/schemas/Success'
+  /cleaner/get_sensor_info:
+    get:
+      tags:
+        - cleaner
+      description: |
+        空気清浄機のセンサの情報を取得
+      responses:
+        '200':
+          description: |
+            空気清浄機のセンサの情報を取得
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/GetSensorInfo'
+  /cleaner/get_unit_status:
+    get:
+      tags:
+        - cleaner
+      description: |
+        空気清浄機のユニットの状態を取得
+      responses:
+        '200':
+          description: |
+            空気清浄機のユニットの状態を取得
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/GetSensorInfo'
 components:
   schemas:
     BasicInfo:
@@ -334,6 +326,44 @@ components:
         auto_off_tm:
           type: string
       example: 'ret=OK,auto_off_flg=0,auto_off_tm=- -'
+    GetModelInfo:
+      type: object
+      description: |
+        モデルの情報
+      properties:
+        ret:
+          type: string
+          example: OK
+        sup_mode:
+          type: string
+        sup_airvol:
+          type: string
+        sup_humd0:
+          type: string
+        sup_humd1:
+          type: string
+        sup_humd2:
+          type: string
+        sup_humd3:
+          type: string
+        sup_humd4:
+          type: string
+        sup_humd5:
+          type: string
+        sup_sensor:
+          type: string
+        sup_devset:
+          type: string
+        en_scdltmr:
+          type: string
+        en_OpeOpt:
+          type: string
+        en_aclink:
+          type: string
+        streamer_type:
+          type: string
+        en_dust_filter:
+          type: string
     GetUnitInfo:
       type: object
       description: |
@@ -455,6 +485,59 @@ components:
           type: string
       example: |
         ret=OK,pow=1,mode=1,airvol=0,humd=4
+    GetSensorInfo:
+      type: object
+      description: |
+        モデルの情報
+      properties:
+        ret:
+          type: string
+          example: OK
+        htemp:
+          type: integer
+          description: |
+            気温(摂氏)
+          example: 30
+        hhum:
+          type: integer
+          description: |
+            湿度
+          example: 50
+        pm25:
+          type: integer
+          description: |
+            pm2.5(0の時アプリでは1と表示される)
+          example: 0
+        dust:
+          type: integer
+          description: |
+            ほこり(0の時アプリでは1と表示される)
+          example: 0
+        odor:
+          type: integer
+          description: |
+            におい(0の時アプリでは1と表示される)
+          example: 0
+    GetUnitStatus:
+      type: object
+      description: |
+        モデルの情報
+      properties:
+        ret:
+          type: string
+          example: OK
+        filter:
+          type: integer
+          example: 0
+        strmr_cln:
+          type: integer
+          example: 0
+        water_supply:
+          type: integer
+          example: 0
+        unit_err:
+          type: integer
+          example: 0
     Success:
       type: object
       description: |
