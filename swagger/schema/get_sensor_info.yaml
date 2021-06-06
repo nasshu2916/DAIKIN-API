@@ -1,6 +1,6 @@
 type: object
 description: |
-  モデルの情報
+  空気清浄機のセンサの情報
 properties:
   ret:
     type: string

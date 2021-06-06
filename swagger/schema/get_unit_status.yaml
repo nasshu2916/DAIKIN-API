@@ -1,6 +1,6 @@
 type: object
 description: |
-  モデルの情報
+  空気清浄機のユニットの状態
 properties:
   ret:
     type: string

@@ -40,6 +40,8 @@ paths:
     $ref: ./paths/cleaner/get_sensor_info.yaml
   /cleaner/get_unit_status:
     $ref: ./paths/cleaner/get_unit_status.yaml
+  /cleaner/get_device_setting:
+    $ref: ./paths/cleaner/get_device_setting.yaml
 
 components:
   schemas:
@@ -59,6 +61,8 @@ components:
       $ref: "./schema/get_sensor_info.yaml"
     GetUnitStatus:
       $ref: "./schema/get_unit_status.yaml"
+    GetDeviceSetting:
+      $ref: "./schema/get_device_setting.yaml"
     Success:
       $ref: "./schema/success.yaml"
 

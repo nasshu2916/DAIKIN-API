@@ -229,6 +229,20 @@ paths:
             text/plain:
               schema:
                 $ref: '#/components/schemas/GetSensorInfo'
+  /cleaner/get_device_setting:
+    get:
+      tags:
+        - cleaner
+      description: |
+        空気清浄機のデバイス設定を取得
+      responses:
+        '200':
+          description: |
+            空気清浄機のデバイス設定を取得
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/GetDeviceSetting'
 components:
   schemas:
     BasicInfo:
@@ -488,7 +502,7 @@ components:
     GetSensorInfo:
       type: object
       description: |
-        モデルの情報
+        空気清浄機のセンサの情報
       properties:
         ret:
           type: string
@@ -521,7 +535,7 @@ components:
     GetUnitStatus:
       type: object
       description: |
-        モデルの情報
+        空気清浄機のユニットの状態
       properties:
         ret:
           type: string
@@ -538,6 +552,38 @@ components:
         unit_err:
           type: integer
           example: 0
+    GetDeviceSetting:
+      type: object
+      description: |
+        空気清浄機のデバイス設定
+      properties:
+        ret:
+          type: string
+          example: OK
+        led_dsp:
+          type: integer
+          example: 0
+        d_sns:
+          type: integer
+          example: 0
+        c_lock:
+          type: integer
+          example: 0
+        streamer:
+          type: integer
+          example: 0
+        act_ion:
+          type: integer
+          example: 1
+        buzzer:
+          type: integer
+          example: 1
+        turbo:
+          type: string
+          example: '-'
+        eco_moni:
+          type: integer
+          example: 1
     Success:
       type: object
       description: |
