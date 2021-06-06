@@ -1,0 +1,19 @@
+type: object
+description: |
+  空気清浄機のセンサの情報
+properties:
+  ret:
+    type: string
+    example: OK
+  s_dayw:
+    type: integer
+    example: 1
+  week_pm25:
+    type: string
+    example: 0/0/0/0/0/0/0/0/0/0/0/0/0/0
+  week_dust:
+    type: string
+    example: 0/0/0/0/0/0/0/0/0/0/0/0/0/0
+  week_odor:
+    type: string
+    example: 0/0/0/0/0/0/0/0/0/0/0/0/0/0

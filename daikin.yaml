@@ -257,6 +257,20 @@ paths:
             text/plain:
               schema:
                 $ref: '#/components/schemas/GetDaySnsrCount'
+  /cleaner/get_week_snsr_count:
+    get:
+      tags:
+        - cleaner
+      description: |
+        空気清浄機の1週間のセンサ反応グラフの取得する
+      responses:
+        '200':
+          description: |
+            空気清浄機の1週間のセンサ反応グラフの取得する
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/GetWeekSnsrCount'
 components:
   schemas:
     BasicInfo:
@@ -642,6 +656,26 @@ components:
             昨日の においセンサ の反応回数が '/' 区切りで1時間単位で返ってくる  
             アプリ内では 2時間の合計値が表示される
           example: 0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0/0
+    GetWeekSnsrCount:
+      type: object
+      description: |
+        空気清浄機のセンサの情報
+      properties:
+        ret:
+          type: string
+          example: OK
+        s_dayw:
+          type: integer
+          example: 1
+        week_pm25:
+          type: string
+          example: 0/0/0/0/0/0/0/0/0/0/0/0/0/0
+        week_dust:
+          type: string
+          example: 0/0/0/0/0/0/0/0/0/0/0/0/0/0
+        week_odor:
+          type: string
+          example: 0/0/0/0/0/0/0/0/0/0/0/0/0/0
     Success:
       type: object
       description: |

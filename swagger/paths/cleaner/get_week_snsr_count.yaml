@@ -1,0 +1,13 @@
+get:
+  tags:
+    - cleaner
+  description: |
+    空気清浄機の1週間のセンサ反応グラフの取得する
+  responses:
+    "200":
+      description: |
+        空気清浄機の1週間のセンサ反応グラフの取得する
+      content:
+        text/plain:
+          schema:
+            $ref: "../../schema/get_week_snsr_count.yaml"
