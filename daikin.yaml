@@ -120,6 +120,28 @@ paths:
             text/plain:
               schema:
                 $ref: '#/components/schemas/Success'
+  /common/set_name:
+    get:
+      tags:
+        - common
+      description: |
+        機器の名称を変更する
+      parameters:
+        - in: query
+          name: name
+          schema:
+            type: string
+            example: Cleaner
+            description: |
+              接続機器の名称
+      responses:
+        '200':
+          description: |
+            機器の名称を変更
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Success'
   /cleaner/get_model_info:
     get:
       tags:

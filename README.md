@@ -39,6 +39,7 @@ swagger には json 形式で書いてまずが、実際は key と value を = 
 | /common/notify_date_time     | 現在時刻の登録                      |
 | /common/look_adapter         | 接続確認を開始                      |
 | /common/stop_look_adapter    | 接続確認を終了                      |
+| /common/set_name             | 機器の名称を変更                     |
 | /cleaner/get_model_info      | モデルの情報を取得                      |
 | /cleaner/get_unit_info       | ユニットの情報を取得                     |
 | /cleaner/get_control_info    | 空気清浄機のモードを取得                |
