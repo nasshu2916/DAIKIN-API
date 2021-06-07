@@ -26,11 +26,11 @@ swagger には json 形式で書いてまずが、実際は key と value を = 
 基本的にすべて GET リクエストで set 系のものは URL パラメータ で送られています。
 
 ### 記載 API 一覧
+- /common: 機器に関する情報の取得、登録の API 群  
+- /cleaner: 空気清浄機に関する情報の取得、登録の API 群
 
-/common: 機器に関する情報の取得、登録の API 群
-/cleaner: 空気清浄機に関する情報の取得、登録の API 群
-
-| Path                         | description                        |
+#### common(機器に関する情報)
+| Path                         | Description                        |
 |------------------------------|------------------------------------|
 | /common/basic_info           | 機器の基本情報を取得                 |
 | /common/get_datetime         | 機器の時刻を取得                     |
@@ -40,6 +40,10 @@ swagger には json 形式で書いてまずが、実際は key と value を = 
 | /common/look_adapter         | 接続確認を開始                      |
 | /common/stop_look_adapter    | 接続確認を終了                      |
 | /common/set_name             | 機器の名称を変更                     |
+
+#### cleaner(空気清浄機に関する情報)
+| Path                         | Description                        |
+|------------------------------|------------------------------------|
 | /cleaner/get_model_info      | モデルの情報を取得                      |
 | /cleaner/get_unit_info       | ユニットの情報を取得                     |
 | /cleaner/get_control_info    | 空気清浄機のモードを取得                |
