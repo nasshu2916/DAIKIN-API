@@ -1,0 +1,13 @@
+get:
+  tags:
+    - common
+  description: |
+    接続確認を終了する
+  responses:
+    '200':
+      description: |
+        接続確認を終了
+      content:
+        text/plain:
+          schema:
+            $ref: "../../schema/success.yaml"

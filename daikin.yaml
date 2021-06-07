@@ -92,6 +92,34 @@ paths:
             text/plain:
               schema:
                 $ref: '#/components/schemas/GetWifiSetting'
+  /common/look_adapter:
+    get:
+      tags:
+        - common
+      description: |
+        接続確認を開始する
+      responses:
+        '200':
+          description: |
+            接続確認を開始
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Success'
+  /common/stop_look_adapter:
+    get:
+      tags:
+        - common
+      description: |
+        接続確認を終了する
+      responses:
+        '200':
+          description: |
+            接続確認を終了
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Success'
   /cleaner/get_model_info:
     get:
       tags:

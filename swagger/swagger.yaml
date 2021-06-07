@@ -18,6 +18,10 @@ paths:
     $ref: ./paths/common/notify_date_time.yaml
   /common/get_wifi_setting:
     $ref: ./paths/common/get_wifi_setting.yaml
+  /common/look_adapter:
+    $ref: ./paths/common/look_adapter.yaml
+  /common/stop_look_adapter:
+    $ref: ./paths/common/stop_look_adapter.yaml
 
   /cleaner/get_model_info:
     $ref: ./paths/cleaner/get_model_info.yaml
