@@ -1,0 +1,13 @@
+get:
+  tags:
+    - cleaner
+  description: |
+    モデルの情報を取得
+  responses:
+    "200":
+      description: |
+        モデルの情報
+      content:
+        text/plain:
+          schema:
+            $ref: "../../schema/get_model_info.yaml"

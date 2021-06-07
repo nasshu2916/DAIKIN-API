@@ -18,20 +18,9 @@ paths:
     $ref: ./paths/common/notify_date_time.yaml
   /common/get_wifi_setting:
     $ref: ./paths/common/get_wifi_setting.yaml
+
   /cleaner/get_model_info:
-    get:
-      tags:
-        - cleaner
-      description: |
-        モデルの情報を取得
-      responses:
-        "200":
-          description: |
-            モデルの情報
-          content:
-            text/plain:
-              schema:
-                $ref: "./schema/get_model_info.yaml"
+    $ref: ./paths/cleaner/get_model_info.yaml
   /cleaner/get_unit_info:
     $ref: ./paths/cleaner/get_unit_info.yaml
   /cleaner/get_control_info:

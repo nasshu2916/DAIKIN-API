@@ -30,19 +30,19 @@ swagger には json 形式で書いてまずが、実際は key と value を = 
 /common: 機器に関する情報の取得、登録の API 群
 /cleaner: 空気清浄機に関する情報の取得、登録の API 群
 
-| Path                         | description                                     |
-| ---------------------------- | ----------------------------------------------- |
-| /common/basic_info           | 機器の基本情報を取得                            |
-| /common/get_datetime         | 機器の時刻を取得                                |
-| /common/get_notify           | 通知情報を取得                                  |
-| /common/get_wifi_setting     | Wi-Fi の接続を情報を取得                        |
-| /common/notify_date_time     | 現在時刻の登録                                  |
-| /cleaner/get_model_info      | モデルの情報を取得                              |
-| /cleaner/get_unit_info       | ユニットの情報を取得                            |
-| /cleaner/get_control_info    | 空気清浄機のモードを取得                        |
-| /cleaner/set_control_info    | 空気清浄機のモードを変更                        |
-| /cleaner/get_ctrl_info       | 空気清浄機のモードを取得                        |
-| /cleaner/get_unit_status     | 空気清浄機のユニットの状態を取得                |
-| /cleaner/get_device_setting  | 空気清浄機のデバイス設定を取得                  |
-| /cleaner/get_day_snsr_count  | 空気清浄機の 1 日のセンサ反応グラフの取得する   |
-| /cleaner/get_week_snsr_count | 空気清浄機の 1 週間のセンサ反応グラフの取得する |
+| Path                         | description                        |
+|------------------------------|------------------------------------|
+| /common/basic_info           | 機器の基本情報を取得                 |
+| /common/get_datetime         | 機器の時刻を取得                     |
+| /common/get_notify           | 通知情報を取得                      |
+| /common/get_wifi_setting     | Wi-Fi の接続を情報を取得              |
+| /common/notify_date_time     | 現在時刻の登録                      |
+| /cleaner/get_model_info      | モデルの情報を取得                      |
+| /cleaner/get_unit_info       | ユニットの情報を取得                     |
+| /cleaner/get_control_info    | 空気清浄機のモードを取得                |
+| /cleaner/set_control_info    | 空気清浄機のモードを変更                |
+| /cleaner/get_ctrl_info       | 空気清浄機のモードを取得                |
+| /cleaner/get_unit_status     | 空気清浄機のユニットの状態を取得          |
+| /cleaner/get_device_setting  | 空気清浄機のデバイス設定を取得           |
+| /cleaner/get_day_snsr_count  | 空気清浄機の 1 日のセンサ反応グラフの取得   |
+| /cleaner/get_week_snsr_count | 空気清浄機の 1 週間のセンサ反応グラフの取得 |

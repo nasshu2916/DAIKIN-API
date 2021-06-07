@@ -1,6 +1,6 @@
 get:
   tags:
-    - cleaner
+    - common
   description: |
     Wi-Fi の接続を情報を取得する
   responses:
