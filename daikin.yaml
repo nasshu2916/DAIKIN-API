@@ -78,6 +78,20 @@ paths:
             text/plain:
               schema:
                 $ref: '#/components/schemas/Success'
+  /common/get_wifi_setting:
+    get:
+      tags:
+        - cleaner
+      description: |
+        Wi-Fi の接続を情報を取得する
+      responses:
+        '200':
+          description: |
+            Wi-Fi の接続を情報
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/GetWifiSetting'
   /cleaner/get_model_info:
     get:
       tags:
@@ -368,6 +382,31 @@ components:
         auto_off_tm:
           type: string
       example: 'ret=OK,auto_off_flg=0,auto_off_tm=- -'
+    GetWifiSetting:
+      type: object
+      properties:
+        ret:
+          type: string
+          example: OK
+        ssid:
+          type: string
+          description: |
+            Wi-Fi の SSID
+          example: 1
+        security:
+          type: string
+          description: |
+            Wi-Fi のセキュリティ情報
+          example: mixed
+        key:
+          type: string
+          description: |
+            Wi-Fi のパスワード(平文)
+          example: PASSWORD
+        link:
+          type: integer
+          example: 1
+      example: 'ret=OK,ssid=SSID,security=mixed,key=PASSWORD,link=1'
     GetModelInfo:
       type: object
       description: |

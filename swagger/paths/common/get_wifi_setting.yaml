@@ -1,0 +1,13 @@
+get:
+  tags:
+    - cleaner
+  description: |
+    Wi-Fi の接続を情報を取得する
+  responses:
+    "200":
+      description: |
+        Wi-Fi の接続を情報
+      content:
+        text/plain:
+          schema:
+            $ref: "../../schema/get_wifi_setting.yaml"

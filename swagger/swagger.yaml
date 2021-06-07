@@ -16,6 +16,8 @@ paths:
     $ref: ./paths/common/get_notify.yaml
   /common/notify_date_time:
     $ref: ./paths/common/notify_date_time.yaml
+  /common/get_wifi_setting:
+    $ref: ./paths/common/get_wifi_setting.yaml
   /cleaner/get_model_info:
     get:
       tags:
@@ -55,6 +57,8 @@ components:
       $ref: "./schema/get_datetime.yaml"
     GetNotify:
       $ref: "./schema/get_notify.yaml"
+    GetWifiSetting:
+      $ref: "./schema/get_wifi_setting.yaml"
     GetModelInfo:
       $ref: "./schema/get_model_info.yaml"
     GetUnitInfo:

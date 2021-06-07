@@ -35,6 +35,7 @@ swagger には json 形式で書いてまずが、実際は key と value を = 
 | /common/basic_info           | 機器の基本情報を取得                            |
 | /common/get_datetime         | 機器の時刻を取得                                |
 | /common/get_notify           | 通知情報を取得                                  |
+| /common/get_wifi_setting     | Wi-Fi の接続を情報を取得                        |
 | /common/notify_date_time     | 現在時刻の登録                                  |
 | /cleaner/get_model_info      | モデルの情報を取得                              |
 | /cleaner/get_unit_info       | ユニットの情報を取得                            |

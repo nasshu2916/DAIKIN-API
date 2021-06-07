@@ -1,0 +1,25 @@
+type: object
+properties:
+  ret:
+    type: string
+    example: OK
+  ssid:
+    type: string
+    description: |
+      Wi-Fi の SSID
+    example: 1
+  security:
+    type: string
+    description: |
+      Wi-Fi のセキュリティ情報
+    example: "mixed"
+  key:
+    type: string
+    description: |
+      Wi-Fi のパスワード(平文)
+    example: "PASSWORD"
+  link:
+    type: integer
+    example: 1
+example: |-
+  ret=OK,ssid=SSID,security=mixed,key=PASSWORD,link=1
