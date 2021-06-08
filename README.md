@@ -9,7 +9,8 @@
 Firmware: 1.11.2-g4
 ```
 
-[API 一覧](http://htmlpreview.github.io/?https://github.com/nasshu2916/DAIKIN-API/blob/master/index.html)
+[API 一覧](http://htmlpreview.github.io/?https://github.com/nasshu2916/DAIKIN-API/blob/master/index.html)  
+レスポンス内容を確認する場合は ローカルで swagger-ui を立ち上げてください。
 
 ### ローカル環境
 
