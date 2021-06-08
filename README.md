@@ -9,7 +9,9 @@
 Firmware: 1.11.2-g4
 ```
 
-### 確認方法
+[API 一覧](http://htmlpreview.github.io/?https://github.com/nasshu2916/DAIKIN-API/blob/master/index.html)
+
+### ローカル環境
 
 ```sh
 docker-compose up -d
@@ -18,6 +20,8 @@ docker-compose up -d
 port:8080 で swagger-ui が立ち上がります。
 
 swagger-ui は、[swagger/swagger.yaml](https://github.com/nasshu2916/DAIKIN-API/blob/master/swagger/swagger.yaml) を `swagger-cli` で結合させた [daikin.yaml](https://github.com/nasshu2916/DAIKIN-API/blob/master/daikin.yaml) の内容を表示しています。
+
+また、makefile で yaml の結合と同時に html を生成します。
 
 ## API 仕様
 
