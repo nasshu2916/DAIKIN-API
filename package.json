@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "bootprint": "^4.0.4",
-    "bootprint-openapi": "^4.0.4"
+    "bootprint-openapi": "^4.0.4",
+    "@apidevtools/swagger-cli": "^4.0.4"
   }
 }
