@@ -1,0 +1,48 @@
+name: Build
+
+on:
+  push:
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x, 15.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Cache Node.js modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.OS }}-node-
+            ${{ runner.OS }}-
+      - name: npm install
+        run: npm ci
+      - name: swagger-cli bundle
+        run: |
+          npx swagger-cli bundle -o ./daikin.yaml -t yaml ./swagger/swagger.yaml
+          if [ -n "$(git status --porcelain)" ]; then
+            git status --porcelain
+            echo "差分があります"
+            exit 1
+          fi
+      - name: build html
+        run: |
+          npx bootprint openapi ./daikin.yaml target
+          npx html-inline target/index.html > index.html
+          if [ -n "$(git status --porcelain)" ]; then
+            git status --porcelain
+            echo "差分があります"
+            exit 1
+          fi
+      - run: npx swagger-cli validate ./daikin.yaml
