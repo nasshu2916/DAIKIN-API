@@ -113,6 +113,10 @@
                         <td></td>
                     </tr>
                     <tr>
+                        <td><a href="#operation--cleaner-set_device_setting-get">GET /cleaner/set_device_setting</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
                         <td><a href="#operation--cleaner-get_day_snsr_count-get">GET /cleaner/get_day_snsr_count</a></td>
                         <td></td>
                     </tr>
@@ -559,6 +563,77 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <p>ユニット</p>
+                                            
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                
+                                                <div class="col-md-6 sw-response-model">
+                                            </div>
+                                            
+                                            </div>                </dd>
+                            </dl>
+                        </section>
+                </div>
+            </div>
+        
+        <span id="path--cleaner-set_device_setting"></span>
+            <div id="operation--cleaner-set_device_setting-get" class="swagger--panel-operation-get panel">
+                <div class="panel-heading">
+                    <div class="operation-summary"></div>
+                    <h3 class="panel-title"><span class="operation-name">GET</span> <strong>/cleaner/set_device_setting</strong></h3>
+                        Tags:
+                            <a href="#tag-cleaner">cleaner</a>
+                </div>
+                <div class="panel-body">
+                    <section class="sw-operation-description">
+                        <p>空気清浄機のデバイス設定を変更</p>
+            
+                    </section>
+            
+                    
+                        <section class="sw-request-params">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th class="sw-param-name"></th>
+                                    <th class="sw-param-description"></th>
+                                    <th class="sw-param-type"></th>
+                                    <th class="sw-param-data-type"></th>
+                                    <th class="sw-param-annotation"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                            <td>
+                                                led_dsp
+                                            </td>
+                                            <td><p>表示ランプの明るさ切り替え<br>0: 明<br>1: 暗<br>2: 切</p>
+                                        </td>
+                                            <td>query</td>
+                                            <td>
+                                        <span class="json-property-type">object</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            </td>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    
+                        <section class="sw-responses">
+                    
+                            <dl>
+                                    <dt class="sw-response-200">
+                                        200 OK
+                                    
+                                    </dt>
+                                    <dd class="sw-response-200">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <p>空気清浄機のデバイス設定を変更</p>
                                             
                                                 </div>
                                             </div>

@@ -6,6 +6,7 @@ properties:
     type: string
     example: OK
   led_dsp:
+    description: 表示ランプの明るさ
     type: integer
     example: 0
   d_sns:

@@ -307,6 +307,35 @@ paths:
             text/plain:
               schema:
                 $ref: '#/components/schemas/GetDeviceSetting'
+  /cleaner/set_device_setting:
+    get:
+      tags:
+        - cleaner
+      description: |
+        空気清浄機のデバイス設定を変更
+      parameters:
+        - in: query
+          name: led_dsp
+          description: |
+            表示ランプの明るさ切り替え  
+            0: 明  
+            1: 暗  
+            2: 切
+          schema:
+            type: integer
+            enum:
+              - 0
+              - 1
+              - 2
+          example: 0
+      responses:
+        '200':
+          description: |
+            空気清浄機のデバイス設定を変更
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Success'
   /cleaner/get_day_snsr_count:
     get:
       tags:
@@ -678,6 +707,7 @@ components:
           type: string
           example: OK
         led_dsp:
+          description: 表示ランプの明るさ
           type: integer
           example: 0
         d_sns:

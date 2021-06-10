@@ -39,6 +39,8 @@ paths:
     $ref: ./paths/cleaner/get_unit_status.yaml
   /cleaner/get_device_setting:
     $ref: ./paths/cleaner/get_device_setting.yaml
+  /cleaner/set_device_setting:
+    $ref: ./paths/cleaner/set_device_setting.yaml
   /cleaner/get_day_snsr_count:
     $ref: ./paths/cleaner/get_day_snsr_count.yaml
   /cleaner/get_week_snsr_count:
