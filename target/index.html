@@ -13,7 +13,7 @@
         Version: <span class="sw-info-version">0.0.0</span>
     </p>
     <p><p>json 形式で記述しているが、
-    実際は key と value を = で繋いだコンマ区切りの形式でレスポンスが返ってくる。</p>
+    実際は key と value を = で繋いだコンマ区切りの形式でレスポンスが返ってくる。<br>どのhttpメソッドを使ってもレスポンスが返ってくる。また、パラメータはクエリパラメータとして送る必要がある。</p>
     </p>
     
     
@@ -50,7 +50,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td><a href="#operation--common-notify_date_time-get">GET /common/notify_date_time</a></td>
+                        <td><a href="#operation--common-notify_date_time-post">POST /common/notify_date_time</a></td>
                         <td></td>
                     </tr>
                     <tr>
@@ -66,7 +66,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td><a href="#operation--common-set_name-get">GET /common/set_name</a></td>
+                        <td><a href="#operation--common-set_name-post">POST /common/set_name</a></td>
                         <td></td>
                     </tr>
                 </tbody>
@@ -97,7 +97,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td><a href="#operation--cleaner-set_control_info-get">GET /cleaner/set_control_info</a></td>
+                        <td><a href="#operation--cleaner-set_control_info-post">POST /cleaner/set_control_info</a></td>
                         <td></td>
                     </tr>
                     <tr>
@@ -113,7 +113,7 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td><a href="#operation--cleaner-set_device_setting-get">GET /cleaner/set_device_setting</a></td>
+                        <td><a href="#operation--cleaner-set_device_setting-post">POST /cleaner/set_device_setting</a></td>
                         <td></td>
                     </tr>
                     <tr>
@@ -462,10 +462,10 @@
             </div>
         
         <span id="path--cleaner-set_control_info"></span>
-            <div id="operation--cleaner-set_control_info-get" class="swagger--panel-operation-get panel">
+            <div id="operation--cleaner-set_control_info-post" class="swagger--panel-operation-post panel">
                 <div class="panel-heading">
                     <div class="operation-summary"></div>
-                    <h3 class="panel-title"><span class="operation-name">GET</span> <strong>/cleaner/set_control_info</strong></h3>
+                    <h3 class="panel-title"><span class="operation-name">POST</span> <strong>/cleaner/set_control_info</strong></h3>
                         Tags:
                             <a href="#tag-cleaner">cleaner</a>
                 </div>
@@ -578,10 +578,10 @@
             </div>
         
         <span id="path--cleaner-set_device_setting"></span>
-            <div id="operation--cleaner-set_device_setting-get" class="swagger--panel-operation-get panel">
+            <div id="operation--cleaner-set_device_setting-post" class="swagger--panel-operation-post panel">
                 <div class="panel-heading">
                     <div class="operation-summary"></div>
-                    <h3 class="panel-title"><span class="operation-name">GET</span> <strong>/cleaner/set_device_setting</strong></h3>
+                    <h3 class="panel-title"><span class="operation-name">POST</span> <strong>/cleaner/set_device_setting</strong></h3>
                         Tags:
                             <a href="#tag-cleaner">cleaner</a>
                 </div>
@@ -854,10 +854,10 @@
             </div>
         
         <span id="path--common-notify_date_time"></span>
-            <div id="operation--common-notify_date_time-get" class="swagger--panel-operation-get panel">
+            <div id="operation--common-notify_date_time-post" class="swagger--panel-operation-post panel">
                 <div class="panel-heading">
                     <div class="operation-summary"></div>
-                    <h3 class="panel-title"><span class="operation-name">GET</span> <strong>/common/notify_date_time</strong></h3>
+                    <h3 class="panel-title"><span class="operation-name">POST</span> <strong>/common/notify_date_time</strong></h3>
                         Tags:
                             <a href="#tag-common">common</a>
                 </div>
@@ -952,10 +952,10 @@
             </div>
         
         <span id="path--common-set_name"></span>
-            <div id="operation--common-set_name-get" class="swagger--panel-operation-get panel">
+            <div id="operation--common-set_name-post" class="swagger--panel-operation-post panel">
                 <div class="panel-heading">
                     <div class="operation-summary"></div>
-                    <h3 class="panel-title"><span class="operation-name">GET</span> <strong>/common/set_name</strong></h3>
+                    <h3 class="panel-title"><span class="operation-name">POST</span> <strong>/common/set_name</strong></h3>
                         Tags:
                             <a href="#tag-common">common</a>
                 </div>

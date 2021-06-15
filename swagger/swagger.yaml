@@ -5,7 +5,8 @@ info:
   title: DAIKIN API
   description: |
     json 形式で記述しているが、
-    実際は key と value を = で繋いだコンマ区切りの形式でレスポンスが返ってくる。
+    実際は key と value を = で繋いだコンマ区切りの形式でレスポンスが返ってくる。  
+    どのhttpメソッドを使ってもレスポンスが返ってくる。また、パラメータはクエリパラメータとして送る必要がある。
 
 paths:
   /common/basic_info:

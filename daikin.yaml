@@ -4,7 +4,8 @@ info:
   title: DAIKIN API
   description: |
     json 形式で記述しているが、
-    実際は key と value を = で繋いだコンマ区切りの形式でレスポンスが返ってくる。
+    実際は key と value を = で繋いだコンマ区切りの形式でレスポンスが返ってくる。  
+    どのhttpメソッドを使ってもレスポンスが返ってくる。また、パラメータはクエリパラメータとして送る必要がある。
 paths:
   /common/basic_info:
     get:
@@ -49,7 +50,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/GetNotify'
   /common/notify_date_time:
-    get:
+    post:
       tags:
         - common
       description: |
@@ -121,7 +122,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Success'
   /common/set_name:
-    get:
+    post:
       tags:
         - common
       description: |
@@ -185,7 +186,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/GetControlInfo'
   /cleaner/set_control_info:
-    get:
+    post:
       tags:
         - cleaner
       description: |
@@ -308,7 +309,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/GetDeviceSetting'
   /cleaner/set_device_setting:
-    get:
+    post:
       tags:
         - cleaner
       description: |
