@@ -1,8 +1,7 @@
 post:
   tags:
     - common
-  description: |
-    現在時刻の登録
+  summary: 現在時刻の登録
   parameters:
     - in: query
       name: date

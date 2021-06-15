@@ -1,8 +1,7 @@
 get:
   tags:
     - cleaner
-  description: |
-    ユニットの情報を取得
+  summary: ユニットの情報を取得
   responses:
     "200":
       description: |

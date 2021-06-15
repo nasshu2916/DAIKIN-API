@@ -1,8 +1,7 @@
 get:
   tags:
     - common
-  description: |
-    機器の基本情報を取得
+  summary: 機器の基本情報を取得
   responses:
     '200':
       description: |

@@ -1,8 +1,7 @@
 post:
   tags:
     - cleaner
-  description: |
-    空気清浄機のデバイス設定を変更
+  summary: 空気清浄機のデバイス設定を変更
   parameters:
     - in: query
       name: led_dsp

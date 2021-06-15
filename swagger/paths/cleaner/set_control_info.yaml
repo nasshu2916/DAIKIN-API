@@ -1,8 +1,7 @@
 post:
   tags:
     - cleaner
-  description: |
-    空気清浄機のモードを変更
+  summary: 空気清浄機のモードを変更
   parameters:
     - in: query
       name: pow

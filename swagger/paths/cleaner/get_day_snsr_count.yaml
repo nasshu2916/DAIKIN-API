@@ -1,8 +1,7 @@
 get:
   tags:
     - cleaner
-  description: |
-    空気清浄機の1日のセンサ反応グラフの取得する
+  summary: 空気清浄機の1日のセンサ反応グラフの取得する
   responses:
     "200":
       description: |

@@ -1,8 +1,7 @@
 post:
   tags:
     - common
-  description: |
-    機器の名称を変更する
+  summary: 機器の名称を変更する
   parameters:
     - in: query
       name: name

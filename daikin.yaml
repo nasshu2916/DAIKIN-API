@@ -11,8 +11,7 @@ paths:
     get:
       tags:
         - common
-      description: |
-        機器の基本情報を取得
+      summary: 機器の基本情報を取得
       responses:
         '200':
           description: |
@@ -25,8 +24,7 @@ paths:
     get:
       tags:
         - common
-      description: |
-        機器の時刻を取得
+      summary: 機器の時刻を取得
       responses:
         '200':
           description: |
@@ -39,8 +37,7 @@ paths:
     get:
       tags:
         - common
-      description: |
-        通知情報を取得
+      summary: 通知情報を取得
       responses:
         '200':
           description: |
@@ -53,8 +50,7 @@ paths:
     post:
       tags:
         - common
-      description: |
-        現在時刻の登録
+      summary: 現在時刻の登録
       parameters:
         - in: query
           name: date
@@ -83,8 +79,7 @@ paths:
     get:
       tags:
         - common
-      description: |
-        Wi-Fi の接続を情報を取得する
+      summary: Wi-Fi の接続を情報を取得する
       responses:
         '200':
           description: |
@@ -97,8 +92,7 @@ paths:
     get:
       tags:
         - common
-      description: |
-        接続確認を開始する
+      summary: 接続確認を開始する
       responses:
         '200':
           description: |
@@ -111,8 +105,7 @@ paths:
     get:
       tags:
         - common
-      description: |
-        接続確認を終了する
+      summary: 接続確認を終了する
       responses:
         '200':
           description: |
@@ -125,8 +118,7 @@ paths:
     post:
       tags:
         - common
-      description: |
-        機器の名称を変更する
+      summary: 機器の名称を変更する
       parameters:
         - in: query
           name: name
@@ -147,8 +139,7 @@ paths:
     get:
       tags:
         - cleaner
-      description: |
-        モデルの情報を取得
+      summary: モデルの情報を取得
       responses:
         '200':
           description: |
@@ -161,8 +152,7 @@ paths:
     get:
       tags:
         - cleaner
-      description: |
-        ユニットの情報を取得
+      summary: ユニットの情報を取得
       responses:
         '200':
           description: |
@@ -175,8 +165,7 @@ paths:
     get:
       tags:
         - cleaner
-      description: |
-        空気清浄機のモードを取得
+      summary: 空気清浄機のモードを取得
       responses:
         '200':
           description: |
@@ -189,8 +178,7 @@ paths:
     post:
       tags:
         - cleaner
-      description: |
-        空気清浄機のモードを変更
+      summary: 空気清浄機のモードを変更
       parameters:
         - in: query
           name: pow
@@ -270,8 +258,7 @@ paths:
     get:
       tags:
         - cleaner
-      description: |
-        空気清浄機のセンサの情報を取得
+      summary: 空気清浄機のセンサの情報を取得
       responses:
         '200':
           description: |
@@ -284,8 +271,7 @@ paths:
     get:
       tags:
         - cleaner
-      description: |
-        空気清浄機のユニットの状態を取得
+      summary: 空気清浄機のユニットの状態を取得
       responses:
         '200':
           description: |
@@ -298,8 +284,7 @@ paths:
     get:
       tags:
         - cleaner
-      description: |
-        空気清浄機のデバイス設定を取得
+      summary: 空気清浄機のデバイス設定を取得
       responses:
         '200':
           description: |
@@ -312,8 +297,7 @@ paths:
     post:
       tags:
         - cleaner
-      description: |
-        空気清浄機のデバイス設定を変更
+      summary: 空気清浄機のデバイス設定を変更
       parameters:
         - in: query
           name: led_dsp
@@ -341,8 +325,7 @@ paths:
     get:
       tags:
         - cleaner
-      description: |
-        空気清浄機の1日のセンサ反応グラフの取得する
+      summary: 空気清浄機の1日のセンサ反応グラフの取得する
       responses:
         '200':
           description: |
@@ -355,8 +338,7 @@ paths:
     get:
       tags:
         - cleaner
-      description: |
-        空気清浄機の1週間のセンサ反応グラフの取得する
+      summary: 空気清浄機の1週間のセンサ反応グラフの取得する
       responses:
         '200':
           description: |

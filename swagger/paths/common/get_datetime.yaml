@@ -1,8 +1,7 @@
 get:
   tags:
     - common
-  description: |
-    機器の時刻を取得
+  summary: 機器の時刻を取得
   responses:
     '200':
       description: |

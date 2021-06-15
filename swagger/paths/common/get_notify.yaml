@@ -1,8 +1,7 @@
 get:
   tags:
     - common
-  description: |
-    通知情報を取得
+  summary: 通知情報を取得
   responses:
     '200':
       description: |

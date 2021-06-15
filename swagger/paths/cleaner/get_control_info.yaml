@@ -1,8 +1,7 @@
 get:
   tags:
     - cleaner
-  description: |
-    空気清浄機のモードを取得
+  summary: 空気清浄機のモードを取得
   responses:
     "200":
       description: |

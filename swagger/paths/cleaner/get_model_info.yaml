@@ -1,8 +1,7 @@
 get:
   tags:
     - cleaner
-  description: |
-    モデルの情報を取得
+  summary: モデルの情報を取得
   responses:
     "200":
       description: |

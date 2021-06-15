@@ -1,8 +1,7 @@
 get:
   tags:
     - common
-  description: |
-    接続確認を開始する
+  summary: 接続確認を開始する
   responses:
     '200':
       description: |
