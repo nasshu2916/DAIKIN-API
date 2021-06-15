@@ -2,6 +2,10 @@
 
 ダイキン製加湿空気清浄機 の API です。
 
+各エンドポイントに対してどのhttpメソッドを使ってもレスポンスが返ってくる。また、パラメータを送る場合、クエリパラメータで送信する。
+
+レスポンスは、 key と value を = で繋いだコンマ区切りの形式でレスポンスが返ってくる。
+
 ## [API 一覧](http://htmlpreview.github.io/?https://github.com/nasshu2916/DAIKIN-API/blob/master/index.html)  
 レスポンス内容を確認する場合は ローカルで swagger-ui を立ち上げてください。
 
